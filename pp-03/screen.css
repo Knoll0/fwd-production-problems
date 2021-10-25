@@ -15,7 +15,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #two,
 #one {
   color: white;
-  height: 100vw;
+  height: 33.33vw;
 }
 #three {
   background-color: purple;
@@ -31,8 +31,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* ==== LAYOUT STYLES ==== */
 #content{
   display: flex;
-  flex-direction: column-reverse;
-  flex-wrap: nowrap;
+  flex-flow: column-reverse wrap-reverse;
 }
 
 #three,
@@ -42,6 +41,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 @media screen and (min-width: 600px) {
+  #content {
+    flex-flow: row-reverse wrap-reverse;
+  }
   #one,
   #two {
     width: 50vw;
@@ -49,14 +51,12 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   #three {
     width: 100vw;
   }
-  #content {
-    flex-flow: row-reverse wrap-reverse;
-  }
+
 }
 
 @media screen and (min-width: 800px) {
   #content {
-    flex-flow: row-reverse wrap-reverse;
+    flex-flow: row-reverse;
   }
   #three,
   #two,
