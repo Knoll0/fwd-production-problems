@@ -15,7 +15,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #two,
 #one {
   color: white;
-  height: 33.33vw;
+  height: 100vw;
 }
 #three {
   background-color: purple;
@@ -27,41 +27,34 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   background-color: red;
 }
 
-
 /* ==== LAYOUT STYLES ==== */
 #content{
   display: flex;
   flex-flow: column-reverse wrap-reverse;
 }
-
 #three,
 #two,
 #one {
-
 }
-
 @media screen and (min-width: 600px) {
   #content {
     flex-flow: row-reverse wrap-reverse;
   }
   #one,
   #two {
-    width: 50vw;
+    flex: 1 0 50%;
+    height: 50vw;
   }
   #three {
-    width: 100vw;
+    flex: 1 0 100%
   }
-
 }
 
 @media screen and (min-width: 800px) {
-  #content {
-    flex-flow: row-reverse;
-  }
   #three,
   #two,
   #one{
-    width: 33.33vw;
+    flex: 1 0 33%;
+    height: 33vw
   }
-
 }
