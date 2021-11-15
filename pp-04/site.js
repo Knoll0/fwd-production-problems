@@ -13,11 +13,21 @@ x = 5;
 // }
 
 //Step 2
+// function double(num) {
+//   return num * 2;
+// }
+
+//Step 3
 function double(num) {
+  if(typeof(num) === "string"){ num = parseInt(num); }
+  if(typeof(num) !== "number" || isNaN(num)) {
+    console.log("Num must be a number, you put " + num);
+    return;
+  }
   return num * 2;
 }
 
-double(6);
+console.log(double("4"));
 console.log('The value of x is', x, '-- it should be 5.');
 
 /*
