@@ -6,9 +6,15 @@
 
 x = 5;
 
+//Step 1
+// function double(num) {
+//   var x = num * 2;
+//   return x;
+// }
+
+//Step 2
 function double(num) {
-  var x = num * 2;
-  return x;
+  return num * 2;
 }
 
 double(6);
